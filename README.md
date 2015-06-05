@@ -1,4 +1,4 @@
-# torchViewer
+# Torch Viewer
 This repository provides simple infrastructure to interact with torch outputs produced by a Neaural Network model. 
 It can be used for visualizing neaural network models and input data. 
 Also it can be used to export data to other programming languages with an HTTP interface.
