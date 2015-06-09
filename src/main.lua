@@ -10,8 +10,9 @@ local torchModel = require("torch_viewer.lua")
 cmd = torch.CmdLine()
 
 cmd:text() 
-cmd:option('-file_format','lm_[model]_sample[batch]_[loss].t7','input file format')
+cmd:option('-file_format','lm_model_mdl_samplebtch.00_loss.t7','input file format')
 cmd:option('-input_dir','dir','input directory')
+cmd:option('-port',8890,'port number for web app')
 cmd:text()
  
 opt = cmd:parse(arg)
@@ -26,5 +27,5 @@ app = turbo.web.Application:new({
 {"/model/(%d+)$", modelModel}
 })
 
-app:listen(8888)
+app:listen(opt.port)
 turbo.ioloop.instance():start()
